@@ -22,6 +22,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to the E-Commerce Order Service');
 });
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
